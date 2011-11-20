@@ -157,7 +157,8 @@ sub  loop {
 	print("pubDate: ".$channel->{pubDate}."\n");
 	print("itemcount: ".$itemcount."\n");
 
-	if (rand(10)<1) {
+	#if (rand(10)<1) {
+	if (0) {
 		$tcp2k->set_text_size(3);
 		$tcp2k->set_style( $STYLE_BOLD );
 		$tcp2k->print_text( $hash );	
