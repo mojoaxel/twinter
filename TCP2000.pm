@@ -5,7 +5,7 @@
 # https://flattr.com/thing/373125/Twinter
 # ----------------------------------------------------------------------------
 package TCP2000;
-$VERSION = '0.1';
+$VERSION = '0.2';
 
 use Printer;
 
@@ -57,7 +57,7 @@ sub new {
 }
 
 ############################################################################
-sub clean_buffer {
+sub clear_buffer {
 	$sendBuffer = "";
 }
 
@@ -274,6 +274,7 @@ sub set_mirrored {
 sub flush {
 	my ($self) = @_;
 	$prn->print( $sendBuffer );
+	$prn->clear_buffer();
 }
 
 ############################################################################
