@@ -107,14 +107,16 @@ sub clean_text {
         $text =~ s/´/\'/g; # Aprostroph
 
         # Deutsche Sonderzeichen        
-        $text =~ s/&#xe4;/\xCD/g; #ä
-        $text =~ s/Ä/\xA0/g;
-        $text =~ s/ö/\xB9/g;
-        $text =~ s/Ö/\xA1/g;
-        $text =~ s/&#xfc;/\xBE/g; #ü
-        $text =~ s/Ü/\xA2/g;
-        $text =~ s/ß/\xA3/g;
-        $text =~ s/\?/\x3F/g;
+        $text =~ s/&#xe4;/\xCD/g; #a uml
+        $text =~ s/ä/\xCD/g; 	#a uml
+        $text =~ s/Ä/\xA0/g;	#A uml
+        $text =~ s/ö/\xB9/g;	#o uml
+        $text =~ s/Ö/\xA1/g;	#O uml
+        $text =~ s/&#xfc;/\xBE/g; #u uml
+        $text =~ s/ü/\xBE/g; 	#u uml
+        $text =~ s/Ü/\xA2/g; 	#U uml
+        $text =~ s/ß/\xA3/g; 	#sharp s
+        $text =~ s/\?/\x3F/g; 	#questionmark
 
         return $text;
 }
