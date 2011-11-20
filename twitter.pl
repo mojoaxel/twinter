@@ -157,8 +157,6 @@ sub  loop {
 	print("pubDate: ".$channel->{pubDate}."\n");
 	print("itemcount: ".$itemcount."\n");
 
-	$tcp2k->clean_buffer();
-
 	if (rand(10)<1) {
 		$tcp2k->set_text_size(3);
 		$tcp2k->set_style( $STYLE_BOLD );
@@ -196,8 +194,8 @@ sub  loop {
 		
 		my $text = $item->{title};
 		my $pubDate = $item->{pubDate};
-		#$pubDate =~ s/(.*)\+.*/$1/ig;
-		#$pubDate =~ s/\s?, \d? \s? (\d?):(\d?):(\d?) /$1:$2:$3/ig;
+		$pubDate =~ s/(.*)\+.*/$1/ig;
+		#$pubDate =~ s/(\s?, \d? \s? \d?:\d?:\d?) .*/$1/ig;
 		my $author = $item->{author};	
 		$author =~ s/^.*\((.*)\)/$1/ig;
 
