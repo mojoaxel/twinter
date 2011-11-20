@@ -274,7 +274,7 @@ sub set_mirrored {
 sub flush {
 	my ($self) = @_;
 	$prn->print( $sendBuffer );
-	$prn->clear_buffer();
+	$sendbuffer = "";
 }
 
 ############################################################################
