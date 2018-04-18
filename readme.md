@@ -1,3 +1,6 @@
+![Printer printing tweets](https://upload.wikimedia.org/wikipedia/commons/5/54/Twitter_receipt_printer.jpg "Symbolbild, CC BY 2.0 Till Dettmering")
+
+
 License
 -------
 
@@ -9,7 +12,6 @@ License
 # https://flattr.com/thing/373125/Twinter
 # ----------------------------------------------------------------------------
 ```
-
 
 Setup
 -----
